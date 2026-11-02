@@ -1,0 +1,13 @@
+---
+- name: Provsioning a web server
+  hosts: webservers
+  become: true
+
+  tasks:
+   - name: Install Nginx
+     ansible.builtin.apt:
+        name: nginx
+        state: present
+
+
+
